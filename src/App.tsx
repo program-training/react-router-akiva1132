@@ -1,12 +1,13 @@
+import { SideBar } from "./components/users/SideBar/sideBar.tsx";
+import { router } from "./route.tsx";
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import { Example } from "./components/Example/Example";
 
-function App() {
+export function App() {
   return (
-    <>
-      <Example />{" "}
-    </>
+    <div id="App">
+      <SideBar />
+      <Outlet />
+    </div>
   );
 }
-
-export default App;
